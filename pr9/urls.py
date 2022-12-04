@@ -25,6 +25,7 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', index, name="functional"),
     path('summary/', include('summary.urls')),
     path('api/<str:s>', views.ReplacerView.as_view(), name="Replacer"),
     path('schema/', SpectacularAPIView.as_view(), name="schema"),

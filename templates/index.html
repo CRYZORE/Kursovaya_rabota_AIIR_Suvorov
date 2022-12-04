@@ -5,6 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-<h1>f"Сумма чисел {a}+{b} равна {summary.summary(a, b)}"</h1>
+<form method="POST">{%csrf_token%}
+    <table>{{form}}</table>
+    <input type="submit" value="Отправить">
+</form>
 </body>
 </html>
